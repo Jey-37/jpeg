@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" minHeight="480.0" minWidth="640.0" prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: #3b3a3a;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jpeg.MainController">
+   <Button fx:id="openButton" layoutX="60.0" layoutY="14.0" mnemonicParsing="false" onAction="#onOpenButtonClick" prefHeight="33.0" prefWidth="110.0" style="-fx-background-color: #2b2a2a;" text="Open" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="14.0">
+      <font>
+         <Font name="Calibri Bold" size="17.0" />
+      </font>
+   </Button>
+   <Button fx:id="saveButton" disable="true" layoutX="192.0" layoutY="14.0" mnemonicParsing="false" onAction="#onSaveButtonClick" prefHeight="33.0" prefWidth="110.0" style="-fx-background-color: #2b2a2a;" text="Save" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="190.0" AnchorPane.topAnchor="14.0">
+      <font>
+         <Font name="Calibri Bold" size="17.0" />
+      </font>
+   </Button>
+   <HBox fx:id="hBox" alignment="CENTER" layoutX="30.0" layoutY="62.0" style="-fx-background-color: #2b2a2a;" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="62.0">
+      <ImageView fx:id="imView" fitHeight="318.0" fitWidth="580.0" pickOnBounds="true" preserveRatio="true" smooth="false" />
+   </HBox>
+   <Label fx:id="label1" layoutX="371.0" layoutY="14.0" prefHeight="3.0" prefWidth="198.0" style="visibility: false;" text="Size of the image:" textFill="WHITE" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="10.0">
+      <font>
+         <Font name="Calibri Bold" size="18.0" />
+      </font>
+   </Label>
+   <Spinner fx:id="qSpinner" amountToStepBy="0.1" editable="true" initialValue="0.0" layoutX="362.0" layoutY="421.0" max="50.0" min="0.0" prefHeight="15.0" prefWidth="88.0" AnchorPane.bottomAnchor="34.0" AnchorPane.rightAnchor="190.0">
+   </Spinner>
+   <Label fx:id="label2" layoutX="371.0" layoutY="35.0" prefHeight="25.0" prefWidth="198.0" style="visibility: false;" text="00000000 bytes" textFill="WHITE" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="28.0">
+      <font>
+         <Font name="Calibri Bold" size="18.0" />
+      </font>
+   </Label>
+   <Button fx:id="pressButton" disable="true" layoutX="488.0" layoutY="416.0" mnemonicParsing="false" onAction="#onPressButtonClick" prefHeight="33.0" prefWidth="110.0" style="-fx-background-color: #2b2a2a;" text="Press Image" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="60.0">
+      <font>
+         <Font name="Calibri Bold" size="17.0" />
+      </font>
+   </Button>
+   <ProgressBar fx:id="progressBar" layoutX="30.0" layoutY="382.0" prefHeight="18.0" prefWidth="580.0" progress="0.0" AnchorPane.bottomAnchor="79.60000000000002" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" visible="false" />
+</AnchorPane>
